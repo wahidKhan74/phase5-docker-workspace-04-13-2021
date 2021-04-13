@@ -1,0 +1,25 @@
+#docker version
+sudo docker --version
+sudo docker -v
+
+#docker info
+sudo docker info
+
+# docker images 
+sudo docker images
+
+# docker container 
+sudo docker ps -a
+sudo docker container ls
+
+# pull docker image 
+-> sudo docker pull alpine
+-> sudo docker pull ubuntu
+
+# run container from image
+sudo docker run -it ubuntu /bin/bash
+# run docker container with container-name 
+sudo docker run --name webserver-container -it ubuntu /bin/bash
+
+# rmove / delete container 
+sudo docker rm <container-id>  or <container-name>
