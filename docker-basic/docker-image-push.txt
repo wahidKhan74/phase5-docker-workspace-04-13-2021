@@ -1,0 +1,18 @@
+# create a docker image with tag
+
+sudo docker tag ubuntu:latest wahid74/webserver-repo:v1.0.0
+sudo docker tag ubuntu:latest wahid74/webserver-repo:v1.0.1
+
+# docker login
+sudo docker login 
+
+sudo docker push wahid74/webserver-repo:v1.0.0
+sudo docker push wahid74/webserver-repo:v1.0.1
+
+
+-------------------------
+push custom image phpcode
+
+-> sudo docker tag phpcode:latest wahid74/php-webserver:v1.0.0
+
+-> sudo docker push wahid74/php-webserver:v1.0.0
