@@ -1,0 +1,18 @@
+# initialize a kubernetese cluster
+-> kubeadm  init 
+-> o/p :- Your Kubernetes control-plane has initialized successfully!
+
+# To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+# Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+  # After the cluster gets started, deploy a weave network to the cluster.
+
+export kubever=$(kubectl version | base64 | tr -d '\n')
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"

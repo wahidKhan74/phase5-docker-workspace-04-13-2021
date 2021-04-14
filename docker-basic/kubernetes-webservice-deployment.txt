@@ -1,0 +1,9 @@
+#list all nodes
+kubectl get node
+
+# create an application  namespace
+kubectl create namespace application
+
+# create kubernetes deployment pod
+kubectl run ecom-webserive-kub --image=wahid74/ecom-webservice --port=8989
+kubectl expose pod/ecom-webserive-kub --port=8989 --target-port=8989 --type=LoadBalancer
